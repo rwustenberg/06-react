@@ -1,0 +1,13 @@
+.thumbnails{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-auto-rows: 1fr 1fr;
+	grid-row-gap: 15px;
+	grid-column-gap: 15px;
+	height:auto;
+}
+.thumbnail{
+	width: 200px;
+	height: 400px;
+	background-color: red;
+}

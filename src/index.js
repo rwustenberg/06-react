@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/Places.css';
 import Places from './components/Places';
 import * as serviceWorker from './serviceWorker';
 
