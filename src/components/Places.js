@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Places.css'
+import Favourites from './favourites'
 
 class Places extends React.Component {
 	state = {
@@ -38,6 +39,7 @@ class Places extends React.Component {
 
 		 		{this.state.places.map((e, i) => <div className="thumbnail" key={i}> {e.name + " " + e.price + " " + e.location}</div>)}
 			</div>
+			<Favourites />
 		</div>
 		)
 	}

@@ -2,7 +2,7 @@
 import React from 'react'
 import '../styles/favourites.css'
 
-class favourites extends React.Component {
+class Favourites extends React.Component {
 	render() {
 		return (
 			<div className= "favourites">
@@ -11,4 +11,4 @@ class favourites extends React.Component {
 	}
 }
 
-export default favourites
+export default Favourites
