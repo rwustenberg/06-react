@@ -1,5 +1,5 @@
-import React from 'react';
-import '../styles/Places.css';
+import React from 'react'
+import '../styles/Places.css'
 
 class Places extends React.Component {
 	state = {
@@ -20,7 +20,12 @@ class Places extends React.Component {
 				name:"lewbowski bar",
 				price:"$30",
 				location:"iceland"
+			},{
+				name:"flat iron grill",
+				price: "$20",
+				location: 'Atlanta'
 			}
+
 		]
 	}
 	render() {
@@ -30,7 +35,8 @@ class Places extends React.Component {
 				{this.state.places.length}
 			</h1>
 			<div className= "thumbnails">
-		 		{this.state.places.map((e, i) => <div className= "thumbnail" key={i}> {e.name + " " + e.price + " " + e.location}</div>)}
+
+		 		{this.state.places.map((e, i) => <div className="thumbnail" key={i}> {e.name + " " + e.price + " " + e.location}</div>)}
 			</div>
 		</div>
 		)
