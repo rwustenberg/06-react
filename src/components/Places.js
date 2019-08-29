@@ -5,7 +5,9 @@ class Places extends React.Component {
 	render() {
 		return (
 		<div>
-		{this.state.places.length}
+			<h1>
+				{this.state.places.length}
+			</h1>
 		</div>
 		)
 	}
