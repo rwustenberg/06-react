@@ -1,11 +1,16 @@
 import React from 'react';
+import '../styles/Thumbnail.css'
 
 
 class Thumbnail extends React.Component {
-	state = {place: this.props.place}
+	state = {
+		place: this.props.place}
 	render() {
 		return (
-			 <div className="thumbnail">  {this.props.place.name} {this.props.place.price} {this.props.place.location}</div>
+			<div className="Thumbnail">
+				<h3>{this.props.place.name}</h3>
+				<span>{this.props.place.price} {this.props.place.location}</span>
+			</div>
 		)
 	}
 }

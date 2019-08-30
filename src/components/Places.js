@@ -7,11 +7,11 @@ class Places extends React.Component {
 	state = {
 		places: [
 			{
-				name:"Harrys",
+				name:"Harry's",
 				price:"$3",
-				location:"thailand"
+				location:"Koh Samui"
 			},{
-				name:"888 pan asain",
+				name:"888 Pan Asain",
 				price:"$10",
 				location:"Austin"
 			},{
@@ -19,13 +19,17 @@ class Places extends React.Component {
 				price:"$15",
 				location:"Auckland"
 			},{
-				name:"lewbowski bar",
+				name:"Lewbowski Bar",
 				price:"$30",
-				location:"iceland"
+				location:"Iceland"
 			},{
-				name:"flat iron grill",
+				name:"Flat Iron Grill",
 				price: "$20",
 				location: 'Atlanta'
+			},{
+				name: "Casa De Toño",
+				price: "$5",
+				location: "Mexico City"
 			}
 
 		]
