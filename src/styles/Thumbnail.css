@@ -1,8 +1,12 @@
 .Thumbnail {
 	height: 200px;
 	width: auto;
-	background-color: yellow;
 	border: solid 2px;
 	border-color: black;
 	padding: 20px;
+	line-height: 19px;
+	text-align: center;
+}
+.liked {
+	background-color: red;
 }
