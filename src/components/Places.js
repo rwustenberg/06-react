@@ -38,7 +38,7 @@ class Places extends React.Component {
 			</h1>
 			<div className= "thumbnails">
 		 		{this.state.places.map((e, i) =>
-					<Thumbnail sue = {i} place = {this.state.places} />)}
+					<Thumbnail key= {i} place = {e} />)}
 			</div>
 			<Favourites />
 		</div>
