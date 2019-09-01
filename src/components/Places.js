@@ -9,31 +9,54 @@ class Places extends React.Component {
 			{
 				name:"Harry's",
 				price:"$3",
-				location:"Koh Samui"
+				location:"Koh Samui",
+				liked: true
 			},{
 				name:"888 Pan Asain",
 				price:"$10",
-				location:"Austin"
+				location:"Austin",
+				liked: false
 			},{
 				name:"Seafood 'n eat it",
 				price:"$15",
-				location:"Auckland"
+				location:"Auckland",
+				liked: true
 			},{
 				name:"Lewbowski Bar",
 				price:"$30",
-				location:"Iceland"
+				location:"Iceland",
+				liked: true
 			},{
 				name:"Flat Iron Grill",
 				price: "$20",
-				location: 'Atlanta'
+				location: 'Atlanta',
+				liked: false
 			},{
 				name: "Casa De Toño",
 				price: "$5",
-				location: "Mexico City"
+				location: "Mexico City",
+				liked: true
 			}
-
 		]
 	}
+
+		likedPlace = (place) => {
+			let newPlaces = this.state.places.map((p)=> {
+				// If this is the place we want to change
+				if(p === place) {
+					// Then change it
+					let newPlace = Object.assign({}, p)
+					newPlace.liked = !newPlace.liked
+					return newPlace
+				}
+				// Otherwise just return the place as we don't want to modify it
+				return p
+			})
+			this.setState({
+				places: newPlaces,
+			})
+		}
+
 	render() {
 		return (
 		<div className="grid-container">
@@ -42,9 +65,9 @@ class Places extends React.Component {
 			</h1>
 			<div className= "thumbnails">
 		 		{this.state.places.map((e, i) =>
-					<Thumbnail key= {i} place = {e} />)}
+					<Thumbnail key= {i} place = {e} likedPlace = {this.likedPlace}/>)}
 			</div>
-			<Favourites />
+			<Favourites places={this.state.places.filter((p) => p.liked)} liked={this.liked} />
 		</div>
 		)
 	}
