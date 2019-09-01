@@ -4,13 +4,10 @@ import '../styles/Favourites.css'
 import Thumbnail from './Thumbnail'
 
 class Favourites extends React.Component {
-	state = {
-		places: this.props.places
-	}
 	render() {
 		return (
 			<div className= "favourites">
-				{this.state.places.map((p) => <Thumbnail place={p} liked= {this.props.liked} />)}
+				{this.props.places.map((p, index) => <Thumbnail place={p} key={index} />)}
 			</div>
 		)
 	}

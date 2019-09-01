@@ -40,22 +40,22 @@ class Places extends React.Component {
 		]
 	}
 
-		likedPlace = (place) => {
-			let newPlaces = this.state.places.map((p)=> {
-				// If this is the place we want to change
-				if(p === place) {
-					// Then change it
-					let newPlace = Object.assign({}, p)
-					newPlace.liked = !newPlace.liked
-					return newPlace
-				}
-				// Otherwise just return the place as we don't want to modify it
-				return p
-			})
-			this.setState({
-				places: newPlaces,
-			})
-		}
+	likedPlace = (place) => {
+		let newPlaces = this.state.places.map((p)=> {
+			// If this is the place we want to change
+			if(p === place) {
+				// Then change it
+				let newPlace = Object.assign({}, p)
+				newPlace.liked = !newPlace.liked
+				return newPlace
+			}
+			// Otherwise just return the place as we don't want to modify it
+			return p
+		})
+		this.setState({
+			places: newPlaces,
+		})
+	}
 
 	render() {
 		return (
@@ -67,7 +67,7 @@ class Places extends React.Component {
 		 		{this.state.places.map((e, i) =>
 					<Thumbnail key= {i} place = {e} likedPlace = {this.likedPlace}/>)}
 			</div>
-			<Favourites places={this.state.places.filter((p) => p.liked)} liked={this.liked} />
+			<Favourites places={this.state.places.filter((p) => p.liked)}/>
 		</div>
 		)
 	}
