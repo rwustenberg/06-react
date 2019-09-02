@@ -64,6 +64,9 @@ class Places extends React.Component {
 			<h1>
 				{this.state.places.length}
 			</h1>
+			<nav>
+				<input className='Search'placeholder='Search'/>
+			</nav>
 			<div className= "thumbnails">
 		 		{this.state.places.map((e, i) =>
 					<Thumbnail key= {i} place = {e} likedPlace = {this.likedPlace}/>)}
