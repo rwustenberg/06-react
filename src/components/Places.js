@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Places.css'
 import Favourites from './Favourites'
 import Thumbnail from './Thumbnail'
+import Search from './Search'
 
 class Places extends React.Component {
 	state = {
